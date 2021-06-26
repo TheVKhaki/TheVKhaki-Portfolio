@@ -54,11 +54,12 @@
     outline: none;
     border: none;
     background-color: #8d785b;
-    color: wheat;
+    color: #fff;
     font-size: 1.2rem;
     text-align: center;
     border-radius: 5px;
     transition: all 0.5s linear;
+    
     &:hover,
     &:focus,
     &:active{

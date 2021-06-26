@@ -16,7 +16,11 @@
     user-select: none;
 }
 .letters-tablet{
- @extend .letters;
+    display: flex;
+    font-size: 9rem;
+    color: #8d785b;
+    z-index: 2;
+    user-select: none;
 }
 .circle-shape {
     position: absolute;
