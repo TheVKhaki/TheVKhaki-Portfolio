@@ -58,7 +58,9 @@ function Contact() {
             required
             style={{ fontFamily: "sans-serif" }}
           ></textarea>
-          <input className="form-btn" type="submit" value="Send Message" />
+          <button className="form-btn" type="submit">
+            Send massage
+          </button>
         </form>
         {/* Social-media */}
         <div className="contact-social">
