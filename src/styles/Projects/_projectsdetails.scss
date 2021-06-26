@@ -1,0 +1,143 @@
+.first-details{
+    min-height: 90vh;
+    position: relative;
+    img{
+        width: 100%;
+        height: 90vh;
+        object-fit: cover;
+        pointer-events: none;
+        user-select: none;
+        filter: blur(2px);
+    }
+}
+.text-details{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-40%);
+    color: wheat;
+    width: 70%;
+    h2{
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        white-space: nowrap;
+        text-decoration: underline;
+        text-decoration-color: #a83e0c;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+}
+.demo{
+    position: absolute;
+    letter-spacing: 0.8rem;
+    font-size: 6rem;
+    top: 76%;
+    text-decoration: none;
+    left: 50%;
+    padding: 1rem;
+    transform: translate(-50%,-50%) rotate(-20deg);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #a83e0c;
+    transition: all 0.5s;
+    white-space: nowrap;
+    &:hover{
+        transform: translate(-50%,-50%) rotate(0deg);
+        -webkit-text-fill-color: #a83e0c;
+        border: 10px solid wheat;
+        background-color: rgba(0,0 ,0 , 0.6);
+    }
+}
+.about {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3rem 0 8rem;
+}
+
+.about-text {
+    flex: 1 1 33rem;
+    margin-left: 2rem;
+
+    h2 {
+        color: #a83e0c;
+        font-size: 3rem;
+        margin-top: 1.5rem;
+    }
+
+    p {
+        color: wheat;
+        font-size: 1.3rem;
+
+    }
+
+    .line {
+        height: 0.5rem;
+        background-color: #a83e0c;
+        margin: 2rem 0 2rem -1rem;
+        border-radius: 40%;
+        width: 40%;
+    }
+
+
+}
+
+.about-img {
+    flex: 1 1 36rem;
+    img{
+        width: 100%;
+        height: 110vh;
+        object-fit: contain;
+        user-select: none;
+        pointer-events: none;
+    }
+}
+
+.options {
+    min-height: 40vh;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 3rem 0 0 1rem;
+    }
+
+    li {
+        font-size: 2rem;
+        color: wheat;
+        flex: 1 1 20rem;
+        margin-bottom: 3rem;
+
+        svg {
+            color: #a83e0c;
+            margin-right: 0.5rem;
+        }
+
+    }
+}
+// Media ProjectsDetails
+@media screen and (min-width: 1120px) {
+    .text-details{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1119.98px) {
+    .about-img {
+        margin-top: 5rem;
+    }
+    .first-details{
+        img{
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 575.98px) {
+    .demo{
+        font-size: 4rem;
+    }
+
+}

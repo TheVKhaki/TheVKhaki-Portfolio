@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #202217;
+
+}
+// Import Scss
+@import './Home/home';
+@import './nav';
+@import './Projects/projects';
+@import './Projects/projectsdetails';
+@import './Contact/contact'
