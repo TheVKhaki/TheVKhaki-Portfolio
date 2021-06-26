@@ -32,7 +32,12 @@ function Contact() {
           </h3>
         </div>
         {/* Form Contact */}
-        <form className="contact-form" name="contact" netlify>
+        <form
+          className="contact-form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+        >
           <input
             className="form-input"
             type="text"
