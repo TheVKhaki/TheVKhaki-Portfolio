@@ -28,7 +28,7 @@ function Contact() {
             Email:<span>thevkhaki@gmail.com</span>
           </h3>
           <h3>
-            Phone:<span>09222937260</span>
+            Phone:<span>09120806683</span>
           </h3>
         </div>
         {/* Form Contact */}
@@ -37,17 +37,21 @@ function Contact() {
           name="contact"
           method="POST"
           data-netlify="true"
+          autoComplete="off"
         >
+          <input type="hidden" name="form-name" value="contact" />
           <input
             className="form-input"
             type="text"
             placeholder="Fullname"
+            name="name"
             required
           />
           <input
             className="form-input"
             type="email"
             placeholder="Email"
+            name="email"
             required
           />
           <textarea
@@ -55,6 +59,7 @@ function Contact() {
             cols="50"
             rows="50"
             placeholder="Description"
+            name="message"
             required
             style={{ fontFamily: "sans-serif" }}
           ></textarea>

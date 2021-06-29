@@ -87,8 +87,8 @@ const HomeSection = () => {
             Hi! My name is Amir Khakbaz junior front-end developer from
             Iran,Tehran My love of beautiful websites , write code and curiosity
             made me discover and explore Web development
-            <br /> Some of the technologies I've worked with are HTML & CSS,
-            JavaScript (ES6+) and React.
+            <br /> Some of the technologies I've worked with are <br />
+            HTML & CSS, JavaScript (ES6+) and React.
           </p>
           {/* Social-media*/}
           <div className="home-social">

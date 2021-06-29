@@ -100,9 +100,9 @@
     }
 
     p {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         display: inline-block;
-        width: 45%;
+        width: 43%;
         color: #8d785b;
         white-space: normal;
     }
@@ -156,6 +156,18 @@
     }
 }
 // Media Home
+@media screen and (max-width: 1319.98px) {
+    .home-text p {
+        width: 53%;
+    }
+
+}
+@media screen and (max-width: 1319.98px) {
+    .home-text p {
+        width: 60%;
+    }
+
+}
 @media screen and (max-width: 999.98px) {
     html {
         font-size: 90%;
