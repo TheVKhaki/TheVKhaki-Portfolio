@@ -84,11 +84,11 @@ const HomeSection = () => {
             Front-End <br /> Web Developer
           </h2>
           <p>
-            Hi! My name is Amir Khakbaz junior front-end developer from
-            Iran,Tehran My love of beautiful websites , write code and curiosity
-            made me discover and explore Web development
+            Hi! My name is Amir Khakbaz front-end developer with 3 years of
+            experience from Iran,Tehran My love of beautiful websites , write
+            code and curiosity made me discover and explore Web development
             <br /> Some of the technologies I've worked with are <br />
-            HTML & CSS, JavaScript (ES6+) and React.
+            HTML & CSS, JavaScript (ES6+), React and Nextjs.
           </p>
           {/* Social-media*/}
           <div className="home-social">
