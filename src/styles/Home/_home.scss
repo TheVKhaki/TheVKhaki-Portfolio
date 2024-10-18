@@ -39,6 +39,13 @@
   background-color: #a83e0c;
   border-radius: 100%;
   z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #202217;
+  font-size: 20px;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .circle-shape-3 {

@@ -1,14 +1,33 @@
-import React from "react";
-// Import Image
-import escape1 from "../img/Escape-1.jpg";
-import modernDesign1 from "../img/Modern-Design-1.jpg";
-import blade1 from "../img/Blade-1.jpg";
+import React, { useEffect, useRef, useState } from "react";
+import { useMediaQuery } from "react-responsive";
+
 // Import Animation
-import { motion } from "framer-motion";
+import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 import { pageAnimation } from "../animation";
-// Import Router
-import { Link } from "react-router-dom";
+
+//Data Project
+import { ProjectsState } from "../Projectstate";
 function Projects() {
+  const imageRef = useRef(null);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const [projectSelected, setProjectSelected] = useState(null);
+  const isLopTop = useMediaQuery({ query: "(max-width: 1300px)" });
+  const isTablet = useMediaQuery({ query: "(max-width: 980px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 660px)" });
+  const isMobileSmall = useMediaQuery({ query: "(max-width: 420px)" });
+
+  function changeScale() {
+    if (isLopTop && !isTablet) return 3;
+    if (isTablet && !isMobile) return 2;
+    if (isMobile && !isMobileSmall) return 1.3;
+    if (isMobileSmall) return 1.1;
+    return 4;
+  }
+
+  useEffect(() => {
+    setIsImageLoaded(false);
+  }, [projectSelected]);
+
   return (
     <motion.div
       variants={pageAnimation}
@@ -17,36 +36,148 @@ function Projects() {
       animate="show"
     >
       <section className="projects">
-        {/* ESCAPE */}
-        <div className="project">
-          <h2>Escape</h2>
-          <div className="line"></div>
-          <Link to="/projects/escape">
-            <span>See Project</span>
-            <img src={escape1} alt="Escape Responsive Website Travel Agency" />
-          </Link>
-        </div>
-        {/* Modern Design */}
-        <div className="project">
-          <h2>Modern Design</h2>
-          <div className="line"></div>
-          <Link to="/projects/modern-design">
-            <span>See Project</span>
-            <img
-              src={modernDesign1}
-              alt="Modern Design Responsive Website For Interior Architecture"
-            />
-          </Link>
-        </div>
-        {/* Blade */}
-        <div className="project">
-          <h2>Blade</h2>
-          <div className="line"></div>
-          <Link to="/projects/blade">
-            <span>See Project</span>
-            <img src={blade1} alt="Blade Responsive Website For Barbershop" />
-          </Link>
-        </div>
+        <AnimateSharedLayout>
+          {ProjectsState().map((project, index) => (
+            <motion.div
+              onClick={() => setProjectSelected(project.id)}
+              className={`project ${index % 2 !== 0 ? "odd-project" : ""}`}
+              key={project.id}
+            >
+              <motion.div
+                layoutId={`item-${project.id}`}
+                style={{
+                  width: "313px",
+                  height: "150px",
+                  scale: "1",
+                  position: "relative",
+                  zIndex: "3",
+                }}
+              >
+                <img src={project.mainImg} alt={project.altImg} />
+              </motion.div>
+              <div className="detail">
+                <h2>{project.title}</h2>
+                <p>{project.description}</p>
+              </div>
+              <div className="circle-project"></div>
+              <div className="line-project"></div>
+              <div className="circle-project circle-project-left"></div>
+            </motion.div>
+          ))}
+
+          {/*  */}
+          <AnimatePresence>
+            {projectSelected && (
+              <>
+                {/* Overlay */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 0.7 }}
+                  exit={{ opacity: 0 }}
+                  style={{
+                    position: "fixed",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    backgroundColor: "black",
+                    zIndex: 10,
+                  }}
+                  onClick={() => setProjectSelected(null)}
+                />
+
+                {/* Image Modal */}
+                <motion.div
+                  layoutId={`item-${projectSelected}`}
+                  initial={{ opacity: 0 }}
+                  transition={{
+                    duration: 1,
+                  }}
+                  animate={
+                    isImageLoaded ? { opacity: 1, scale: changeScale() } : {}
+                  }
+                  exit={{ opacity: 0, scale: 1 }}
+                  style={{
+                    position: "fixed",
+                    width: "313px",
+                    height: "150px",
+                    overflow: "hidden",
+                    top: "50%",
+                    left: "50%",
+                    marginLeft: "-155px",
+                    marginTop: "-75px",
+                    zIndex: 20,
+                  }}
+                  // onClick={() => setProjectSelected(null)}
+                >
+                  <motion.div>
+                    {ProjectsState()
+                      .filter((item) => item.id === projectSelected)
+                      .map((item) => (
+                        <motion.img
+                          initial={{ y: 0 }}
+                          animate={
+                            isImageLoaded
+                              ? {
+                                  y: `calc(-100% + 154px)`,
+                                  transition: {
+                                    delay: 1,
+                                    duration: 8,
+                                    repeat: Infinity,
+                                  },
+                                }
+                              : {}
+                          }
+                          exit={{
+                            scale: 1,
+                            y: 0,
+                            transition: {
+                              duration: 1,
+                            },
+                          }}
+                          key={item.id}
+                          src={item.secondaryImg}
+                          ref={imageRef}
+                          alt={item.altImg}
+                          onLoad={() => setIsImageLoaded(true)}
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                          }}
+                        />
+                      ))}
+                  </motion.div>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, bottom: "-5%" }}
+                  transition={{
+                    duration: 1,
+                  }}
+                  animate={{ opacity: 1, bottom: "8%" }}
+                  exit={{ opacity: 0, bottom: "-5%" }}
+                  style={{
+                    position: "fixed",
+                    bottom: "8%",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    zIndex: "30",
+                  }}
+                >
+                  <a
+                    target="_blank"
+                    href={ProjectsState()
+                      .filter((item) => item.id === projectSelected)
+                      .map((item) => item.urlWebsite)}
+                    className="btn-project"
+                  >
+                    Live Preview
+                  </a>
+                </motion.div>
+              </>
+            )}
+          </AnimatePresence>
+        </AnimateSharedLayout>
       </section>
     </motion.div>
   );

@@ -242,6 +242,34 @@ export const circle3 = {
     },
   },
 };
+export const circle4 = {
+  hidden: {
+    scale: 0,
+    x: "185%",
+    y: "185%",
+  },
+  show: {
+    scale: 1,
+    transition: {
+      duration: 1,
+      ease: "easeInOut",
+    },
+  },
+};
+export const circle5 = {
+  hidden: {
+    scale: 0,
+    x: "-250%",
+    y: "20%",
+  },
+  show: {
+    scale: 1,
+    transition: {
+      duration: 1,
+      ease: "easeInOut",
+    },
+  },
+};
 export const logo = {
   hidden: {
     opacity: 0,

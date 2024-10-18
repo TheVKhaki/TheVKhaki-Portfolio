@@ -1,6 +1,5 @@
 import React from "react";
 // Import Image
-import imgHome from "../img/img-home.jpg";
 import V from "../img/V.png";
 //Import Animation
 import { motion } from "framer-motion";
@@ -20,6 +19,7 @@ import {
   circle2,
   circle3,
   homeText,
+  circle4,
 } from "../animation";
 //Import Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -34,14 +34,22 @@ const HomeSection = () => {
       <section className="home">
         <div className="home-img">
           <motion.div variants={imgBox} className="box"></motion.div>
-          <div>
+          {/* <div>
             <img src={imgHome} alt="Amir Khakbaz" />
-          </div>
+          </div>  */}
         </div>
         {/* circle */}
         <motion.div variants={circle1} className="circle-shape"></motion.div>
-        <motion.div variants={circle2} className="circle-shape-2"></motion.div>
-        <motion.div variants={circle3} className="circle-shape-3"></motion.div>
+        <motion.div variants={circle2} className="circle-shape-2">
+          JavaScript
+        </motion.div>
+        <motion.div variants={circle3} className="circle-shape-3">
+          React
+        </motion.div>
+        <motion.div variants={circle4} className="circle-shape-2">
+          Nextjs
+        </motion.div>
+
         {/* KHAKI in Desktop */}
         <div className="letters">
           <motion.div variants={letter1} className="letter-1 letter">
@@ -84,7 +92,7 @@ const HomeSection = () => {
             Front-End <br /> Web Developer
           </h2>
           <p>
-            Hi! My name is Amir Khakbaz front-end developer with 3 years of
+            Hi! My name is Amir Khakbaz front-end developer with 4 years of
             experience from Iran,Tehran My love of beautiful websites , write
             code and curiosity made me discover and explore Web development
             <br /> Some of the technologies I've worked with are <br />

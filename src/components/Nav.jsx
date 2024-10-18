@@ -8,12 +8,14 @@ import V from "../img/V.png";
 import { motion } from "framer-motion";
 import { khaki, menu } from "../animation";
 //Import Router
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 function Nav() {
+  const { pathname } = useLocation();
+
   return (
     <div id="nav">
       {/* THEVKHAKI */}
-      <motion.div variants={khaki} initial="hidden" animate="show" id="khaki"> 
+      <motion.div variants={khaki} initial="hidden" animate="show" id="khaki">
         <h1>The</h1>
         <span>
           <img src={V} alt="Vlone" />
@@ -26,14 +28,14 @@ function Nav() {
         {/* NAv */}
         <nav>
           <motion.ul variants={menu} initial="hidden" animate="show">
-            <li>
-              <Link to="/"> Home</Link>
+            <li className={`${pathname === "/" ? "active" : ""}`}>
+              <Link to="/">Home</Link>
             </li>
-            <li>
-              <Link to="/projects"> Projects</Link>
+            <li className={`${pathname === "/projects" ? "active" : ""}`}>
+              <Link to="/projects">Projects</Link>
             </li>
-            <li>
-              <Link to="/contact"> Contact</Link>
+            <li className={`${pathname === "/contact" ? "active" : ""}`}>
+              <Link to="/contact">Contact</Link>
             </li>
           </motion.ul>
           {/* NAV in Moblie */}

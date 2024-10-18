@@ -28,7 +28,7 @@ function Contact() {
             Email:<span>thevkhaki@gmail.com</span>
           </h3>
           <h3>
-            Phone:<span>09120806683</span>
+            Phone:<span>+989120806683</span>
           </h3>
         </div>
         {/* Form Contact */}
