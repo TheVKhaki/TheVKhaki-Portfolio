@@ -81,7 +81,7 @@ function Projects() {
                     right: 0,
                     bottom: 0,
                     backgroundColor: "black",
-                    zIndex: 10,
+                    zIndex: 110,
                   }}
                   onClick={() => setProjectSelected(null)}
                 />
@@ -106,7 +106,7 @@ function Projects() {
                     left: "50%",
                     marginLeft: "-155px",
                     marginTop: "-75px",
-                    zIndex: 20,
+                    zIndex: 120,
                   }}
                   // onClick={() => setProjectSelected(null)}
                 >
@@ -161,7 +161,7 @@ function Projects() {
                     bottom: "8%",
                     left: "50%",
                     transform: "translateX(-50%)",
-                    zIndex: "30",
+                    zIndex: "130",
                   }}
                 >
                   <a

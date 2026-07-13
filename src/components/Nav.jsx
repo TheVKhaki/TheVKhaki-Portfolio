@@ -13,15 +13,18 @@ function Nav() {
   const { pathname } = useLocation();
 
   return (
-    <div id="nav">
+    <div
+      id="nav"
+      style={{ background: `${pathname === "/" ? "" : "#202217"}` }}
+    >
       {/* THEVKHAKI */}
-      <motion.div variants={khaki} initial="hidden" animate="show" id="khaki">
+      {/* <motion.div variants={khaki} initial="hidden" animate="show" id="khaki">
         <h1>The</h1>
         <span>
           <img src={V} alt="Vlone" />
         </span>
         <h1>Khaki</h1>
-      </motion.div>
+      </motion.div> */}
       <header className="home-head">
         {/* LOGO */}
         <Logo />

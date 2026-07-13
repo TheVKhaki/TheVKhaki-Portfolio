@@ -10,7 +10,7 @@ body {
 }
 
 .home {
-  min-height: 90vh;
+  min-height: 100vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -45,8 +45,26 @@ body {
   top: 50%;
   width: 700px;
   height: 700px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  border-radius: 100%;
+}
+.circle-shape img {
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  opacity: 0.7;
+}
+.circle-shape img:first-child {
+  animation: rotateRing 5s linear infinite;
+}
+.circle-shape img:last-child {
+  animation: rotateRing 10s linear infinite;
+}
+@keyframes rotateRing {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .circle-shape-2, .circle-shape-3 {
@@ -66,8 +84,8 @@ body {
 }
 
 .circle-shape-3 {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
 }
 
 .home-img {
@@ -110,22 +128,15 @@ body {
   bottom: 0;
 }
 .home-text > h1 {
-  font-size: 4rem;
-  background: linear-gradient(94deg, rgb(141, 120, 91) 35%, rgb(168, 62, 12) 38%);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 3.5rem;
+  color: #a83e0c;
   display: inline-block;
   white-space: nowrap;
 }
 .home-text h2 {
-  font-size: 3rem;
-  background: rgb(141, 120, 91);
-  background: linear-gradient(0deg, rgb(141, 120, 91) 44%, rgb(168, 62, 12) 53%);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin: 1rem 0;
+  font-size: 2.3rem;
+  color: #8d785b;
+  margin-bottom: 3rem;
 }
 .home-text p {
   font-size: 1.17rem;
@@ -138,27 +149,29 @@ body {
   line-height: 80px;
   color: #8d785b;
   display: inline-flex;
-  font-size: 1.6rem;
+  font-size: 1rem;
   margin: 0.6rem 0 0 1rem;
+  position: fixed;
+  bottom: 0;
 }
 .home-text #khaki-mobile span {
   color: #a83e0c;
-  margin: 0.8rem 0.7rem 0 1rem;
+  margin: 0.5rem 0.7rem 0 0.7rem;
 }
 .home-text #khaki-mobile span img {
-  width: 37px;
-  height: 37px;
+  width: 24px;
+  height: 24px;
 }
 
 .home-social {
-  margin-top: 2rem;
+  margin-top: 5rem;
 }
 .home-social ul {
   list-style: none;
   display: inline-flex;
 }
 .home-social ul li:not(:last-child) {
-  margin-right: 3rem;
+  margin-right: 2rem;
 }
 .home-social ul li a {
   color: #202217;
@@ -239,15 +252,17 @@ body {
     display: none;
   }
   .home-text {
-    top: 20%;
+    top: -3%;
   }
   .home-text p {
     width: 90%;
   }
 }
 #nav {
-  min-height: 10vh;
-  background-color: #202217;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 #khaki {
@@ -492,6 +507,7 @@ body {
   min-height: 100vh;
   overflow: hidden;
   padding: 2rem 10rem;
+  margin-top: 10vh;
 }
 .projects h2 {
   padding: 1rem 0;
@@ -658,14 +674,14 @@ body {
   }
 }
 @media screen and (max-width: 650px) {
+  .projects .project .circle-project-left {
+    display: block;
+  }
   .projects .project {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     text-align: center;
-  }
-  .projects .project .circle-project-left {
-    display: block;
   }
   .projects .project:not(:last-child) {
     margin-bottom: 5rem;
@@ -832,6 +848,7 @@ body {
   flex-direction: column;
   text-align: center;
   position: relative;
+  margin-top: 10vh;
 }
 .contact header {
   width: 100%;

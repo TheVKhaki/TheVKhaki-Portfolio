@@ -1,6 +1,8 @@
 import React from "react";
 // Import Image
 import V from "../img/V.png";
+import Ellipse1 from "../img/Ellipse-1.PNG";
+import Ellipse2 from "../img/Ellipse-2.PNG";
 //Import Animation
 import { motion } from "framer-motion";
 import {
@@ -39,7 +41,10 @@ const HomeSection = () => {
           </div>  */}
         </div>
         {/* circle */}
-        <motion.div variants={circle1} className="circle-shape"></motion.div>
+        <motion.div variants={circle1} className="circle-shape">
+          <img src={Ellipse1} alt="" />
+          <img src={Ellipse2} alt="" />
+        </motion.div>
         <motion.div variants={circle2} className="circle-shape-2">
           JavaScript
         </motion.div>
@@ -88,11 +93,9 @@ const HomeSection = () => {
         </div>
         <motion.div variants={homeText} className="home-text ">
           <h1>Amir Khakbaz</h1>
-          <h2>
-            Front-End <br /> Web Developer
-          </h2>
+          <h2>Senior Front-End Developer</h2>
           <p>
-            Hi! My name is Amir Khakbaz front-end developer with 4 years of
+            Hi! My name is Amir Khakbaz front-end developer with 5+ years of
             experience from Iran,Tehran My love of beautiful websites , write
             code and curiosity made me discover and explore Web development
             <br /> Some of the technologies I've worked with are <br />

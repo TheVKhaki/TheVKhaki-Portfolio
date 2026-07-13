@@ -1,4 +1,6 @@
 //Import Images
+import TakGPT from "./img/TakGPT.png";
+import Safaee from "./img/Safaee.png";
 import neobreed1 from "./img/Neobreed.png";
 import TireHub1 from "./img/Tirehub.png";
 import ghestiHub1 from "./img/GhestiHub.png";
@@ -16,6 +18,24 @@ import escape2 from "./img/Escape-2.png";
 
 export const ProjectsState = () => {
   return [
+    {
+      id: 21,
+      title: "TakGPT",
+      mainImg: TakGPT,
+      description: "AI-powered conversational platform.",
+      altImg: "TakGPT AI-powered conversational platform",
+      secondaryImg: TakGPT,
+      urlWebsite: "https://takgpt.app/",
+    },
+    {
+      id: 20,
+      title: "Safaee",
+      mainImg: Safaee,
+      description: "Luxury jewelry collections",
+      altImg: "Luxury jewelry collections",
+      secondaryImg: Safaee,
+      urlWebsite: "https://safaee.com/",
+    },
     {
       id: 1,
       title: "Neobreed",

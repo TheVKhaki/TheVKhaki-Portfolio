@@ -42,7 +42,7 @@ export const letter1 = {
   show: {
     y: -190,
     x: -190,
-    scale: 1.8,
+    scale: 1.2,
     transition: {
       duration: 1,
       ease: "easeInOut",
@@ -72,9 +72,9 @@ export const letter3 = {
     scale: 1,
   },
   show: {
-    y: -240,
+    y: -290,
     x: -30,
-    scale: 1.6,
+    scale: 1.2,
     transition: {
       duration: 1,
       ease: "easeInOut",
@@ -89,8 +89,8 @@ export const letter4 = {
   },
   show: {
     y: -190,
-    x: 190,
-    scale: 1.8,
+    x: 230,
+    scale: 1.2,
     transition: {
       duration: 1,
       ease: "easeInOut",
@@ -217,8 +217,8 @@ export const circle1 = {
 export const circle2 = {
   hidden: {
     scale: 0,
-    x: "-200%",
-    y: "-139%",
+    x: "-188%",
+    y: "-157%",
   },
   show: {
     scale: 1,
@@ -231,8 +231,8 @@ export const circle2 = {
 export const circle3 = {
   hidden: {
     scale: 0,
-    x: "185%",
-    y: "-13%",
+    x: "207%",
+    y: "-40%",
   },
   show: {
     scale: 1,
