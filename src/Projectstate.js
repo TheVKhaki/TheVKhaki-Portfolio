@@ -6,18 +6,68 @@ import TireHub1 from "./img/Tirehub.png";
 import ghestiHub1 from "./img/GhestiHub.png";
 import vista1 from "./img/VistaV1.png";
 import vista2 from "./img/VistaV2.png";
-import affiliateQpoker from "./img/QPokerAffiliate.png";
-import airdropQpoker from "./img/QPokerAirdrop.png";
-import Qpoker from "./img/QPoker.png";
+// import affiliateQpoker from "./img/QPokerAffiliate.png";
+// import airdropQpoker from "./img/QPokerAirdrop.png";
+// import Qpoker from "./img/QPoker.png";
 import Azumi from "./img/Azumi.png";
 import sabaHost from "./img/sabahost.png";
 import mizbanCloud from "./img/mizbanCloud.png";
 import modernDesign1 from "./img/ModernDesign.png";
 import blade1 from "./img/Blade.png";
 import escape2 from "./img/Escape-2.png";
+import Aix2 from "./img/AIx2.png";
+import TaninCard from "./img/Tanin-Card.png";
+import Berim from "./img/Berim.png";
 
 export const ProjectsState = () => {
   return [
+    {
+      id: 23,
+      title: "TaninCard",
+      mainImg: TaninCard,
+      description: "Employee benefits and sports services platform.",
+      altImg: "TaninCard employee benefits and sports services platform",
+      secondaryImg: TaninCard,
+      urlWebsite: "https://tanincard.ir/",
+    },
+    {
+      id: 22,
+      title: "AIX2",
+      mainImg: Aix2,
+      description: "AI-powered platform for fundraising and investing",
+      altImg: "AIX2 AI-powered fundraising and investing platform",
+      secondaryImg: Aix2,
+      urlWebsite: "https://www.aix2.ai/",
+    },
+    {
+      id: 11,
+      title: "SabaHost",
+      mainImg: sabaHost,
+      description: "SabaHost is Reliable web hosting for digital projects",
+      altImg: "SabaHost is Reliable web hosting for digital projects",
+      secondaryImg: sabaHost,
+      urlWebsite: "https://saba.host",
+    },
+    {
+      id: 12,
+      title: "MizbanCloud",
+      mainImg: mizbanCloud,
+      description:
+        "MizbanCloud is Infrastructure provider and integrated cloud solutions",
+      altImg:
+        "MizbanCloud is Infrastructure provider and integrated cloud solutions",
+      secondaryImg: mizbanCloud,
+      urlWebsite: "https://mizbancloud.com",
+    },
+    {
+      id: 51,
+      title: "Berim",
+      mainImg: Berim,
+      description: "AI-powered travel and accommodation booking platform.",
+      altImg: "Berim AI travel and accommodation booking platform",
+      secondaryImg: Berim,
+      urlWebsite: "https://www.berim.ai/",
+    },
     {
       id: 21,
       title: "TakGPT",
@@ -26,24 +76,6 @@ export const ProjectsState = () => {
       altImg: "TakGPT AI-powered conversational platform",
       secondaryImg: TakGPT,
       urlWebsite: "https://takgpt.app/",
-    },
-    {
-      id: 20,
-      title: "Safaee",
-      mainImg: Safaee,
-      description: "Luxury jewelry collections",
-      altImg: "Luxury jewelry collections",
-      secondaryImg: Safaee,
-      urlWebsite: "https://safaee.com/",
-    },
-    {
-      id: 1,
-      title: "Neobreed",
-      mainImg: neobreed1,
-      description: "Neobreed is Generate MenuDigital With AI",
-      altImg: "Neobreed Website Generate MenuDigital With AI",
-      secondaryImg: neobreed1,
-      urlWebsite: "https://menu.neobreed.org/",
     },
     {
       id: 2,
@@ -64,6 +96,25 @@ export const ProjectsState = () => {
       urlWebsite: "https://ghestihub.ir/",
     },
     {
+      id: 20,
+      title: "Safaee",
+      mainImg: Safaee,
+      description: "Luxury jewelry collections",
+      altImg: "Luxury jewelry collections",
+      secondaryImg: Safaee,
+      urlWebsite: "https://safaee.com/",
+    },
+    {
+      id: 1,
+      title: "Neobreed",
+      mainImg: neobreed1,
+      description: "Neobreed is Generate MenuDigital With AI",
+      altImg: "Neobreed Website Generate MenuDigital With AI",
+      secondaryImg: neobreed1,
+      urlWebsite: "https://menu.neobreed.org/",
+    },
+
+    {
       id: 4,
       title: "Vista V2",
       mainImg: vista2,
@@ -81,33 +132,33 @@ export const ProjectsState = () => {
       secondaryImg: vista1,
       urlWebsite: "https://vistav1.netlify.app/",
     },
-    {
-      id: 7,
-      title: "Affiliate Qpoker",
-      mainImg: affiliateQpoker,
-      description: "Affiliate Qpoker is affiliates to promote online poker",
-      altImg: "Affiliate Qpoker is affiliates to promote online poker",
-      secondaryImg: affiliateQpoker,
-      urlWebsite: "https://affiliate.qpoker.io",
-    },
-    {
-      id: 8,
-      title: "Airdrop Qpoker",
-      mainImg: airdropQpoker,
-      description: "Airdrop Qpoker is Free poker tokens for player engagement",
-      altImg: "Airdrop Qpoker is Free poker tokens for player engagement",
-      secondaryImg: airdropQpoker,
-      urlWebsite: "https://participate.qpoker.io/",
-    },
-    {
-      id: 9,
-      title: "Qpoker",
-      mainImg: Qpoker,
-      description: "Qpoker is Online poker platform in Crypto",
-      altImg: "Qpoker is Online poker platform in Crypto",
-      secondaryImg: Qpoker,
-      urlWebsite: "https://qpoker.io/",
-    },
+    // {
+    //   id: 7,
+    //   title: "Affiliate Qpoker",
+    //   mainImg: affiliateQpoker,
+    //   description: "Affiliate Qpoker is affiliates to promote online poker",
+    //   altImg: "Affiliate Qpoker is affiliates to promote online poker",
+    //   secondaryImg: affiliateQpoker,
+    //   urlWebsite: "https://affiliate.qpoker.io",
+    // },
+    // {
+    //   id: 8,
+    //   title: "Airdrop Qpoker",
+    //   mainImg: airdropQpoker,
+    //   description: "Airdrop Qpoker is Free poker tokens for player engagement",
+    //   altImg: "Airdrop Qpoker is Free poker tokens for player engagement",
+    //   secondaryImg: airdropQpoker,
+    //   urlWebsite: "https://participate.qpoker.io/",
+    // },
+    // {
+    //   id: 9,
+    //   title: "Qpoker",
+    //   mainImg: Qpoker,
+    //   description: "Qpoker is Online poker platform in Crypto",
+    //   altImg: "Qpoker is Online poker platform in Crypto",
+    //   secondaryImg: Qpoker,
+    //   urlWebsite: "https://qpoker.io/",
+    // },
     {
       id: 10,
       title: "Azumi",
@@ -116,27 +167,6 @@ export const ProjectsState = () => {
       altImg: "Azumi is Popular Asian cuisine dining destination",
       secondaryImg: Azumi,
       urlWebsite: "https://azumi.ir/",
-    },
-
-    {
-      id: 11,
-      title: "SabaHost",
-      mainImg: sabaHost,
-      description: "SabaHost is Reliable web hosting for digital projects",
-      altImg: "SabaHost is Reliable web hosting for digital projects",
-      secondaryImg: sabaHost,
-      urlWebsite: "https://saba.host",
-    },
-    {
-      id: 12,
-      title: "MizbanCloud",
-      mainImg: mizbanCloud,
-      description:
-        "MizbanCloud is Infrastructure provider and integrated cloud solutions",
-      altImg:
-        "MizbanCloud is Infrastructure provider and integrated cloud solutions",
-      secondaryImg: mizbanCloud,
-      urlWebsite: "https://mizbancloud.com",
     },
 
     {
